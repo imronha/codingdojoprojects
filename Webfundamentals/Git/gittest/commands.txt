@@ -1,0 +1,13 @@
+cd desktop
+mkdir fittest
+cd fittest
+git init
+touch index.html aboutMe.txt style.css
+git add aboutMe.txt
+git commit -m “updated aboutMe”
+git add aboutMe.txt
+git commit -m “added favorite movie to aboutMe”
+git log
+git revert
+git add aboutMe.txt
+get commit -m “added favorite book to aboutMe”
