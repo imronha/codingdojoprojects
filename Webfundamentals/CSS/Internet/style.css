@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: arial,sans-serif;*/
+}
+
+#wrapper{
+    background: linear-gradient(#E7E8EC, white);
+    /*background-color: #E7E8EC;*/
+    width: 970px;
+    height: 806px;
+    margin: 20px;
+}
+
+/*--------Header--------*/
+#header{
+    height: 100px;
+}
+h1{
+    padding-left: 60px;
+    background-color: white;
+}
+h2{
+    background: linear-gradient(#29679D, #829ead, #29679D);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    height: 40px;
+    color: white;
+}
+h3{
+    color: #467498;
+}
+.globe{
+    height: 50px;
+    position: fixed;
+}
+/*--------Sidebar-------*/
+#sidebar{
+    width: 180px;
+    height: 170px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+.sideinfo{
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.sideinfo p{
+    margin: 5px;
+}
+
+/*Sidebar buttons*/
+.sideinfo button{
+    width: 170px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    margin: 2px;
+}
+.btnblue{
+    background: linear-gradient(#A0BDD5, #3D76B0);
+}
+.btnorange{
+    background: linear-gradient(#EDAA59, #ED7C13);
+}
+
+/*Advertisement*/
+.advert{
+    width: 180px;
+    height: 270px;
+    text-align: center;
+}
+.advert p, img, button{
+    display: inline-block;
+}
+
+.advert p{
+    font-size: 22px;
+    color: white;
+    padding: 15px 5px 5px 10px;
+}
+.advert{
+    background: url("ad_background.png");
+    /*background-size: 180px 350px;*/
+}
+.advert button{
+    font-size: 14px;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    background: linear-gradient(#83F1F7, #6eccd1, #83F1F7);
+}
+/*---------Main--------*/
+#main{
+    width: 700px;
+    display: inline-block;
+    padding: 0px 32px;
+}
+
+#maintext{
+    border-top: 1px solid gray;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.mainpic{
+    margin-left: 250px;
+}
+
+/*Main navbar*/
+#minibar{
+    display: flex;
+}
+.left{
+    flex: 1;
+    display: flex;
+    color: #29679D;
+}
+.left p{
+    padding-top: 5px;
+}
+
+.right{
+    flex: .3;
+    display: flex;
+}
+.nums{
+    text-align: center;
+}
+.nums h3{
+    font-size: 22px;
+}
+
+.nums p{
+    font-size: 10px;
+}
+/*------Big Three------*/
+.bigthree{
+    margin-top: 10px;
+    padding: 10px;
+    border: 3px solid #3a92c1;
+    border-bottom: 0px;
+}
+.bigthree img, .bigthreeinfo{
+    display: inline-block;
+}
+
+.bigthreeinfo{
+    width: 550px;
+}
+/*-------Special-------*/
+a{
+    text-decoration: none;
+    color: #6eccd1;
+}
+ul, ol{
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.bold{
+    font-weight: bold;
+}

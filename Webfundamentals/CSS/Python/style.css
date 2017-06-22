@@ -1,0 +1,162 @@
+*{
+    font-family: arial, sans-serif;
+}
+#wrapper{
+    width: 970px;
+    height: 806px;
+    background-color: #265174;
+}
+
+/*Header*/
+
+img{
+    padding: 20px 0px 0px 20px;
+    display: inline-block;
+}
+.header{
+    display: inline-block;
+    height: 50px;
+}
+/* Top right search/text features*/
+
+#options{
+    text-align: right;
+    margin: 0px 0px 0px 280px;;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div #options p{
+    font-size: 12px;
+    margin-left: 80px;
+}
+form{
+    background-color: #444444;
+    padding: 15px 40px 15px 35px;
+    border-radius: 10px;
+}
+
+input{
+    text-align: center;
+    padding: 10px 20px;
+}
+button{
+    padding: 8px;
+    background-color: #2A506E;
+
+}
+
+/*Top Navbar*/
+
+.navbar{
+    background-color: #487FA5;
+    box-shadow: 5px 5px 2px #383838;
+    border-radius: 8px;
+    color: #DAD9D5;
+    font-size: 22px;
+    width: 800px;
+    margin: 3px 100px;
+    text-align: center;
+}
+.navbar p{
+    margin: 10px;
+    padding: 0px 5px;
+    display: inline-block;
+}/*Middle section*/
+
+.middle{
+    text-align: center;
+    color: white;
+    padding: 0px 10px;
+    margin-left: 30px;
+}
+/*Sidebar*/
+
+.sidebar{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li:before {
+	content: "\00BB";
+    color: #f4dc42;
+}
+
+/*Main info section*/
+
+.main{
+    display: inline-block;
+    width: 600px;
+    margin-left: 20px;
+}
+
+/*Getting started/Applications Section*/
+
+#services{
+    background-color: white;
+    /*padding: 10px;*/
+    height: 230px;
+}
+#info{
+    text-align: center;
+    /*margin-left: 100px;*/
+}
+
+.column{
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 3px solid #487FA5;
+    margin-top: 10px;
+    padding: 0px 20px;
+}
+
+/*Footer*/
+
+#footer{
+    color: #99b2db;
+}
+.additionallinks{
+    margin-left: 172px;
+}
+.additionallinks p{
+    padding: 30px 30px 0px 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.last{
+    position: static;
+    font-size: 10px;
+    text-align: center;
+}
+
+/*Special*/
+
+.highlight{
+    color: #f4dc42;
+}
+
+a{
+    color: white;
+}
+
+.spacer{
+    margin-top: 10px;
+}
+
+.small{
+    font-size: 13px;
+}
+
+.italicize{
+    font-style: italic;
+}
+
+.column ul li{
+    color: #487FA5;
+}
