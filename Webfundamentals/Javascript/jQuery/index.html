@@ -17,15 +17,55 @@
         button{
             display: inline-block;
         }
+        .red{
+            color: red;
+        }
     </style>
     <script>
         $(document).ready(function(){
             $('.hide').click(function(){
-                $('p').hide();
+                $('#hideshow').hide();
             })
             $('.show').click(function(){
-                $('p').show();
+                $('#hideshow').show();
             })
+            $('.toggle').click(function(){
+                $('#toggle').toggle();
+            })
+            $('.slideup').click(function(){
+                $('#slide').slideUp();
+            })
+            $('.slidedown').click(function(){
+                $('#slide').slideDown();
+            })
+            $('.slidetoggle').click(function(){
+                $('#slidetoggle').slideToggle();
+            })
+            $('.fadein').click(function(){
+                $('#fade').fadeIn();
+            })
+            $('.fadeout').click(function(){
+                $('#fade').fadeOut();
+            })
+            $('.addclass').click(function(){
+                $('p').addClass("red");
+            })
+            $('.removeclass').click(function(){
+                $('p').removeClass("red");
+            })
+            $('.before').click(function(){
+                $('#beforeafter').before("<p>This is placed before the p tag!</p>");
+            })
+            $('.after').click(function(){
+                $('#beforeafter').after("<p>This is placed after the p tag!</p>");
+            })
+            $('.append').click(function(){
+                $('#beforeafter').append("Append will insert the content with the matched element (ie same p tag)");
+            })
+            // $('.html').click(function(){
+            //     var htmlstring = $('p').html();
+            //     $('p').text(htmlstring);
+            // })
         });
     </script>
 </head>
@@ -34,9 +74,50 @@
         <h1>jQuery Cheatsheet!</h1>
     </div>
     <div>
+        <h2>Show and Hide</h2>
         <button class="hide">Click to hide the following paragraph</button>
         <button class="show">Click to show the following paragraph</button>
-        <p>.hide and .show will hide and show elements from the page.</p>
+        <p id="hideshow">.hide(); and .show(); will hide and show elements from the page.</p>
     </div>
+    <div>
+        <h2>Toggling</h2>
+        <button class="toggle">Click to toggle the following paragraph</button>
+        <p id="toggle">.toggle(); is essentially .hide(); and .show(;) in one method.</p>
+    </div>
+    <div>
+        <h2>Sliding elements</h2>
+        <button class="slideup">Click to slideUp (hide) the following paragraph</button>
+        <button class="slidedown">Click to slideDown (show) the following paragraph</button>
+        <p id="slide">.slideDown(); will display the elements with a sliding motion and .slideUp(); will hide elements with a sliding motion. Method name is case sensitive!</p>
+    </div>
+    <div>
+        <h2>Slide Toggling</h2>
+        <button class="slidetoggle">Click to slide toggle the following paragraph</button>
+        <p id="slidetoggle">.slideToggle(); is essentially .slideUp(); and .slideDown(); in one method. Case sensitive!</p>
+    </div>
+    <div>
+        <h2>Fading Elements</h2>
+        <button class="fadein">Click to fade in the following paragraph</button>
+        <button class="fadeout">Click to fade out the following paragraph</button>
+        <p id="fade">.fadeIn(); and .fadeOut(); will fade elements to/from the page.</p>
+    </div>
+    <div>
+        <h2>Adding/removing Classes from elements</h2>
+        <button class="addclass">Click to add the .red class to all paragraphs</button>
+        <button class="removeclass">Click to remove the .red class from all paragraphs</button>
+        <p>.addClass(); can add any class to an element and .removeClass(); can remove one, multiple, or all classes if specified.</p>
+    </div>
+    <div>
+        <h2>Before and After</h2>
+        <button class="before">Click to add a new p tag before the following paragraph</button>
+        <button class="after">Click to add a new p tag after the following paragraph</button>
+        <button class="append">Click to append the following paragraph</button>
+        <p id="beforeafter">.before(); will insert content before the specified element and .after(); will place it after the element. </p>
+    </div>
+    <!-- <div>
+        <h2>HTML method</h2>
+        <button class="html">Click to see the HTML of the following paragraph</button>
+        <p id="html">.html(); will display the actual HTML of the target element.</p>
+    </div> -->
 </body>
 </html>
