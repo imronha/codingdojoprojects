@@ -1,5 +1,91 @@
 #container{
     width: 970px;
     height: 805px;
+    margin: 10px;
+    padding: 15px;
     background-color: #DDDFD4;
+}
+
+/*-------Header------*/
+#header{
+    background-color: #3FB0AC;
+    /*margin: 10px;*/
+    width: 965px;
+    height: 60px;
+}
+
+.logo, .navbar{
+    display: inline-block;
+}
+
+.navbar{
+    margin-left: 250px;
+    font-size: 18px;
+    padding-top: 10px;
+    vertical-align: top;
+}
+a{
+    color: white;
+}
+/*--------Main-------*/
+#main{
+    background-color: #FAE596;
+    color: #CBD0C6;
+    display: flex;
+    width: 965px;
+    height: 650px;
+    margin: 10px 0px;
+}
+
+.left{
+    height: 600px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #173F43;
+    flex: 1;
+}
+
+.right{
+    flex: 3;
+}
+
+/*Row1*/
+.row1{
+    display: inline-block;
+    margin: 10px;
+}
+.init, .add, .status{
+    width: 30%;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 9px;
+    background-color: #173F43;
+    flex: 1;
+}
+
+/*Row2*/
+.row2{
+    display: inline-block;
+    display: flex;
+}
+.commit, .remote{
+    background-color: #173F43;
+    width: 315px;
+    margin-left: 10px;
+    /*flex: 1;*/
+    display: inline-block;
+}
+
+.row3{
+    background-color: #173F43;
+    width: 640px;
+    height: 200px;
+    margin: 10px;
+}
+/*-------Footer------*/
+#footer{
+    background-color: #3FB0AC;
+    width: 965px;
+    height: 70px;
 }
