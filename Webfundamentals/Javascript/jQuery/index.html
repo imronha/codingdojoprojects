@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style media="screen">
+        div{
+            width: 70%;
+            border-bottom: 1px solid gray;
+            display: inline-block;
+            text-align: center;
+            margin-left: 16%;
+        }
+        button{
+            display: inline-block;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.hide').click(function(){
+                $('p').hide();
+            })
+            $('.show').click(function(){
+                $('p').show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>jQuery Cheatsheet!</h1>
+    </div>
+    <div>
+        <button class="hide">Click to hide the following paragraph</button>
+        <button class="show">Click to show the following paragraph</button>
+        <p>.hide and .show will hide and show elements from the page.</p>
+    </div>
+</body>
+</html>
