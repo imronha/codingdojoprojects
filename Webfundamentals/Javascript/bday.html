@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+    var daysleft = 266;
+
+    while (daysleft >= 0){
+      if (daysleft >=30){
+        console.log("About ", daysleft,"days to go....");
+      } else if (daysleft >= 5 && daysleft <30){
+        console.log("Only ", daysleft, " left!");
+      } else if (daysleft < 5 && daysleft >1){
+        console.log("SO CLOSE. ", daysleft, " DAYS LEFT!!");
+      } else if (daysleft===1){
+        console.log("HAPPY BIRTHDAY!!!");
+      }
+      daysleft = daysleft -1;
+    }
+    </script>
 </head>
 <body>
 
