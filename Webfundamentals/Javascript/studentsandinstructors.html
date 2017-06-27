@@ -6,15 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-    var students = [
-        {first_name: 'Michael', last_name: 'Jordan'},
-        {first_name: 'John', last_name: 'Rosales'},
-        {first_name: 'Mark', last_name: 'Guillen'},
-        {first_name: 'KB', last_name: 'Tonel'}
-    ]
-
-    for (var person in students){
-        console.log(students[person].first_name, students[person].last_name);
+    // var students = [
+    //     {first_name: 'Michael', last_name: 'Jordan'},
+    //     {first_name: 'John', last_name: 'Rosales'},
+    //     {first_name: 'Mark', last_name: 'Guillen'},
+    //     {first_name: 'KB', last_name: 'Tonel'}
+    // ]
+    //
+    // for (var person in students){
+    //     console.log(students[person].first_name, students[person].last_name);
+    // }
+    var users = {
+        'Students': [
+            {first_name:  'Michael', last_name : 'Jordan'},
+            {first_name: 'John', last_name : 'Rosales'},
+            {first_name: 'Mark', last_name : 'Guillen'},
+            {first_name: 'KB', last_name : 'Tonel'}
+        ],
+        'Instructors': [
+            {first_name: 'Michael', last_name : 'Choi'},
+            {first_name: 'Martin', last_name : 'Puryear'}
+        ]
+    }
+    for (var role in users){
+        console.log(role);
+        for (var i = 0; i < role.length/2; i++) {
+            console.log(role.length/2);
+            console.log('',i+1, '-', users.Students[i].first_name,' ', users.Students[i].last_name, ' ', users.Students[i].first_name.length + users.Students[i].last_name.length );
+        }
+        // for (var i = 0; i < role.length; i++) {
+        //     console.log('',i+1, '-', users.Instructors[i].first_name,' ', users.Instructors[i].last_name, ' ', users.Instructors[i].first_name.length + users.Instructors[i].last_name.length );
+        // }
     }
     </script>
 </head>
