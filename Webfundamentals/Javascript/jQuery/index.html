@@ -62,15 +62,17 @@
             $('.append').click(function(){
                 $('#beforeafter').append("Append will insert the content with the matched element (ie same p tag)");
             })
-            // $("p").click(function(){
-            //     var htmlstring = $(this).html();
-            //     $(this).text(htmlstring);
-            // })
-            // $('.attributes').click(function(){
-            //     $('#attr').attr("title", "Attributes Paragraph");
-            //     var title = $("#title").attr("title");
-            //     $("#attr").text(title);
-            // })
+            $('.htmlbtn').click(function(){
+                var htmlstring = $("span.html").html();
+                $('.html').text(htmlstring);
+            })
+            $('.attributes').click(function(){
+                var attrstring = $('#attr').attr("title")
+                $("#title").text(attrstring);
+                // $('#attr').attr("title", "Attributes Paragraph");
+                // var title = $("#title").attr("title");
+                // $("#attr").text(title);
+            })
             $(".cats").click(function() {
                 var text = $(this).text();
                 $("input").val( text );
@@ -78,6 +80,14 @@
             $('.text').click(function(){
                 var str = $("#hideshow").text();
                 $('#text').text(str);
+            })
+            $('.data').click(function(){
+                $( "div" ).data( "test", { first: "bulbasaur", last: "ivysaur!" } );
+                $( "span:first" ).text( $( "div" ).data( "test" ).first );
+                $( "span:last" ).text( $( "div" ).data( "test" ).last );
+                // $('#datastored').data("pokemon", {first: "bulbasaur", second: "ivysaur"});
+                // var pokename = $('#datastored:first').text($('#datastored').data("pokemon").first);
+                // $('#datastored').text(pokename);
             })
         });
     </script>
@@ -127,16 +137,16 @@
         <button class="append">Click to append the following paragraph</button>
         <p id="beforeafter">.before(); will insert content before the specified element and .after(); will place it after the element. </p>
     </div>
-    <!-- <div>
+    <div>
         <h2>HTML method</h2>
-        <button class="html">Click to see the HTML of the following paragraph</button>
-        <p id="html">.html(); will display the actual HTML of the target element.</p>
-    </div> -->
-    <!-- <div>
+        <button class="htmlbtn">Click to see the HTML of the following paragraph</button>
+        <span class="html"><p>.html(); will display the actual HTML of the target element.</p></span>
+    </div>
+    <div>
         <h2>Attributes</h2>
         <button class="attributes">Click to set the attribute of the following paragraph</button>
-        <p id="attr">The attributes of this p tag are: <div id="title"></div></p>
-    </div> -->
+        <p id="attr" title="Title - Attributes Paragraph">The attributes of this p tag are: <span id="title"></span></p>
+    </div>
     <div>
         <h2>Values</h2>
         <p>Change the values of the forms by pressing one of the following buttons</p>
@@ -154,7 +164,7 @@
         <h2>Data Method</h2>
         <button class="data">Click to see the data that was stored for the following paragraph</button>
         <p id="data"> Stores arbitrary data associated with the selected element(s).</p>
-        <p id="datastored"></p>
+        <p>Data stored was <span>____</span> and <span>____</span>!</p>
     </div>
 </body>
 </html>
