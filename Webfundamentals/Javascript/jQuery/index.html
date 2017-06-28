@@ -62,10 +62,23 @@
             $('.append').click(function(){
                 $('#beforeafter').append("Append will insert the content with the matched element (ie same p tag)");
             })
-            // $('.html').click(function(){
-            //     var htmlstring = $('p').html();
-            //     $('p').text(htmlstring);
+            // $("p").click(function(){
+            //     var htmlstring = $(this).html();
+            //     $(this).text(htmlstring);
             // })
+            // $('.attributes').click(function(){
+            //     $('#attr').attr("title", "Attributes Paragraph");
+            //     var title = $("#title").attr("title");
+            //     $("#attr").text(title);
+            // })
+            $(".cats").click(function() {
+                var text = $(this).text();
+                $("input").val( text );
+            })
+            $('.text').click(function(){
+                var str = $("#hideshow").text();
+                $('#text').text(str);
+            })
         });
     </script>
 </head>
@@ -119,5 +132,29 @@
         <button class="html">Click to see the HTML of the following paragraph</button>
         <p id="html">.html(); will display the actual HTML of the target element.</p>
     </div> -->
+    <!-- <div>
+        <h2>Attributes</h2>
+        <button class="attributes">Click to set the attribute of the following paragraph</button>
+        <p id="attr">The attributes of this p tag are: <div id="title"></div></p>
+    </div> -->
+    <div>
+        <h2>Values</h2>
+        <p>Change the values of the forms by pressing one of the following buttons</p>
+        <button class="cats">Fat Cats</button>
+        <button class="cats">Grumpy Cats</button>
+        <button class="cats">Happy Cats</button>
+        <input id="value" value="click a button"></input>
+    </div>
+    <div>
+        <h2>Text Method</h2>
+        <button class="text">Click to see the text for the .hide/.show methods!</button>
+        <p id="text"></p>
+    </div>
+    <div>
+        <h2>Data Method</h2>
+        <button class="data">Click to see the data that was stored for the following paragraph</button>
+        <p id="data"> Stores arbitrary data associated with the selected element(s).</p>
+        <p id="datastored"></p>
+    </div>
 </body>
 </html>
