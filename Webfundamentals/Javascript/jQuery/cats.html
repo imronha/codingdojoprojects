@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style media="screen">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            width: 1053px;
+            /*background-color: red;*/
+            margin: 20px;
+        }
+        img{
+            width: 250px;
+            margin: 5px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".pusheen").click(function(){
+                $(this).hide();
+            })
+            $("button").click(function(){
+                $(".pusheen").show();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+        <img src="pusheen.jpg" alt="pusheen.jpg" class="pusheen">
+    </div>
+    <button>Restore</button>
+</body>
+</html>
