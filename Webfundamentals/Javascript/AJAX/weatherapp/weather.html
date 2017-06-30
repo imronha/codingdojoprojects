@@ -8,7 +8,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            
+            $('form').submit(function(){
+                return false;
+            })
+            $('button').click(function(){
+                $.get('http://api.openweathermap.org/data/2.5/weather?q='+$('input').val()+'&&appid=7bd200e5b916a2cf609349d883f47d92',function(res){
+                    $('.city').html('<h1>'+res.name+'</h1>')
+                    var temp_f = Math.trunc((res.main.temp)*9/5-459.67)
+                    console.log(temp_f);
+                    $('.temp').html('<p>The current temperature is '+temp_f+' degrees F.</p>')
+
+                    console.log(res);
+                })
+            })
+            // $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&&appid=7bd200e5b916a2cf609349d883f47d92',function(res){
+            //     console.log(res);
+            // })
         })
     </script>
 </head>
