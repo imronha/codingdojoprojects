@@ -6,67 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <style media="screen">
-        #pokemon{
-            width: 70%;
-            height: 535px;
-            display: inline-block;
-            overflow: scroll;
-            /*background-color: blue;*/
-        }
-        #pokedex{
-            width: 25%;
-            height: 70%;
-            display: inline-block;
-            position: fixed;
-            border: 10px solid red;
-            padding-left: 40px;
-        }
-    </style>
-    <script>
-        var pokemon = "";
-        for(var i=1; i<152; i++){
-            pokemon += '<img id='+i+' src="http://pokeapi.co/media/img/'+i+'.png">'
-        }
-        $(document).ready(function(){
-            $('#pokemon').append(pokemon);
-
-        $(document).on('click','img',function(){
-            $.get("http://pokeapi.co/api/v1/pokemon/"+$(this).attr('id'),function(res){
-                // <img id='+i+' src="http://pokeapi.co/media/img/'+i+'.png
-                var name_str = "";
-                name_str += "<h1>"+res.name+"</h1>";
-                $("#name").html(name_str);
-
-                var pic_str = "";
-                pic_str += '<img src="http://pokeapi.co/media/img/'+res.pkdx_id+'.png">';
-                $("#pic").html(pic_str);
-
-                var type_str = "";
-                type_str += "<h4>Types</h4>";
-                type_str += "<ul>";
-                for(var i = 0; i < res.types.length; i++) {
-                    type_str += "<li>" + res.types[i].name + "</li>";
-                }
-                type_str += "</ul>";
-                $("#types").html(type_str);
-
-                var height_str = "";
-                height_str += "<h4>Height</h4>";
-                height_str += "<ul><li>" + res.height + "</li></ul>";
-                $("#height").html(height_str);
-
-                var weight_str = "";
-                weight_str += "<h4>Weight</h4>";
-                weight_str += "<ul><li>" + res.weight + "</li></ul>";
-                $("#weight").html(weight_str);
-
-                console.log(res);
-            }, "json");
-        });
-    });
-
-    </script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">

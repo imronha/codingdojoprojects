@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+}
+#container{
+    max-width: 90%;
+    height: 700px;
+    margin: 0px auto;
+    border: 1px solid red;
+    background-image: url('pokebg.png')
+}
+#pokemon{
+    width: 40%;
+    height: 700px;
+    display: inline-block;
+    overflow: auto;
+}
+#pokedex{
+    background-image: url('pokedex.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    width: 58%;
+    height: 95%;
+    vertical-align: top;
+    display: inline-block;
+    /*position: fixed;*/
+    border: 10px solid red;
+    /*padding-left: 40px;*/
+}
+
+#pokedex div {
+    margin: 0px auto;
+}
