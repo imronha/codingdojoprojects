@@ -1,5 +1,5 @@
 var pokemon = "";
-for(var i=1; i<152; i++){
+for(var i=1; i<750; i++){
     pokemon += '<img id='+i+' src="http://pokeapi.co/media/img/'+i+'.png">'
 }
 $(document).ready(function(){
