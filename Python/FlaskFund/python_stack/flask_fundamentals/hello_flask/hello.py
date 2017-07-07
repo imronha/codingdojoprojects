@@ -6,8 +6,8 @@ app = Flask(__name__)    # Global variable __name__ tells Flask whether or not w
                          # localhost:5000/ we will run the following "hello_world" function.
 
 def hello_world():
-    return render_template('index.html')  # Return the string 'Hello World!' as a response.
-    
+    return render_template('index.html',name="Imron")  # Return the string 'Hello World!' as a response.
+
 @app.route('/success')
 def success():
     return render_template('success.html')
