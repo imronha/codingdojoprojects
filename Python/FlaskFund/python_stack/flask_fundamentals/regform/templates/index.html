@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reg Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <ul>
+        <li>First and last name are both required should not include any numbers.</li>
+        <li>Email must be a valid email.</li>
+        <li>Password must be at least 8 characters long</li>
+        <li>Password and confirmation must match</li>
+    </ul>
+    <form class="" action="/process" method="post">
+        First Name: <input type="text" name="first_name" value=""><br>
+        Last Name: <input type="text" name="last_name" value=""><br>
+        Email: <input type="text" name="email" value=""><br>
+        Password: <input type="password" name="password" value=""><br>
+        Confirm Password:<input type="password" name="confirmpw" value=""><br>
+        <input type="submit" name="" value="Submit">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor%}
+    {% endwith %}
+</body>
+</html>
