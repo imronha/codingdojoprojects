@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor%}
+    {% endwith %}
+
+    <h1>Register for new account:</h1>
+    <form action='/register' method='POST'>
+        <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
+        <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
+        <label for="email">Email:<input type="text" name="email" id="email"></label>
+        <label for="password">Password:<input type="password" name="pw" id="pw"></label>
+        <label for="pwconfirm">Password Confirmation:<input type="password" name="pwconfirm" id="pwconfirm"></label>
+        <input type="submit" value="Login">
+    </form>
+    <h1>Please login!</h1>
+    <form action='/login' method='POST'>
+        <label for="email">Email:<input type="text" name="email" id="email"></label>
+        <label for="password">Password:<input type="password" name="pw" id="pw"></label>
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>

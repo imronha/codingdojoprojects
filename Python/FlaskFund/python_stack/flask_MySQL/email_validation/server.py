@@ -9,9 +9,9 @@ EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 @app.route('/')
 def index():
-    query = "SELECT * FROM email"
+    query = "SELECT * FROM emails"
     emails = mysql.query_db(query)
-    print all_emails
+    print emails
     return render_template('index.html', all_emails=emails)
 
 @app.route('/create', methods=['POST'])
@@ -21,11 +21,13 @@ def create_email():
     elif not EMAIL_REGEX.match(request.form['email']):
         flash("Invalid Email Address!")
     else:
-        query = "INSERT INTO email (name, created_at, updated_at) VALUES (:name, NOW(), NOW())"
+        query = "INSERT INTO emails (name, created_at, updated_at) VALUES (:name, NOW(), NOW())"
         data = {'name': request.form['email']}
         email_entered = mysql.query_db(query, data)
         flash("Success!")
-        return render_template('success.html')
+        query = "SELECT * FROM emails"
+        emails = mysql.query_db(query)
+        return render_template('success.html', all_emails=emails)
     # user_email = request.form['email']
     # user_query = "SELECT * FROM email WHERE email.name = :name"
     # query_data = {'name': user_email}
