@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Words</title>
+</head>
+<body>
+    <fieldset>
+        <h1>Add a new word!</h1>
+        <form action="session_words/process" method="post">
+            {% csrf_token %}
+            Word: <input type="text" name="word" value=""><br>
+            <p>Choose color:</p>
+            <input type="radio" name="color" value="Red">Red<br>
+            <input type="radio" name="color" value="Blue">Blue<br>
+            <input type="radio" name="color" value="Green">Green<br>
+            <input type="checkbox" name="size" value="20">Show in BIG font<br>
+            <input type="submit" name="" value="Add to Session">
+        </form>
+    </fieldset>
+    <fieldset>
+        <form action="session_words/delete" method="post">
+            {% csrf_token %}
+            <input type="submit" name="" value="Clear Session"><br>
+        </form>
+            {% for dict in request.session.context %}
+
+                <p style="color:{{ dict.color }}; font-size:{{ dict.size }}px;"> {{ dict.word }} created at {{ dict.date }}</p>
+                <!-- {{ dict.word }}<br> -->
+            {% endfor %}
+            <!-- {{ request.session.context.0.word }} -->
+
+    </fieldset>
+</body>
+</html>
