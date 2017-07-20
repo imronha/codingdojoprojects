@@ -19,8 +19,9 @@
         <tr>
             <td>Dojo Shirt</td>
             <td>$19.99</td>
-            <form action="/process">
-            <td><select class="" name="quantity">
+            <form action="/amadon/process/1" method="post">
+                {% csrf_token %}
+            <td><select class="shirt" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -32,8 +33,9 @@
         <tr>
             <td>Dojo Sweater</td>
             <td>$29.99</td>
-            <form action="/process">
-            <td><select class="" name="quantity">
+            <form action="/amadon/process/2" method="post">
+                {% csrf_token %}
+            <td><select class="sweater" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -45,8 +47,9 @@
         <tr>
             <td>Dojo Cup</td>
             <td>$9.99</td>
-            <form action="/process">
-            <td><select class="" name="quantity">
+            <form action="/amadon/process/3" method="post">
+                {% csrf_token %}
+            <td><select class="cup" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -58,8 +61,9 @@
         <tr>
             <td>Algorithm Book</td>
             <td>$49.99</td>
-            <form action="/process">
-            <td><select class="" name="quantity">
+            <form action="/amadon/process/4" method="post">
+                {% csrf_token %}
+            <td><select class="book" name="quantity">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

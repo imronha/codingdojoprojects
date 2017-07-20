@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thank you!</title>
+</head>
+<body>
+    <h1>Thank you for your order!</h1>
+
+    <h4>Your total today comes to {{ request.session.current_charge }} </h4>
+    <p>You have bought {{ request.session.count }} items and spent a total of {{ request.session.total }}</p>
+
+    <form action="/amadon/reset" method="post">
+        {% csrf_token %}
+        <input type="submit" name="" value="Reset">
+    </form>
+</body>
+</html>
