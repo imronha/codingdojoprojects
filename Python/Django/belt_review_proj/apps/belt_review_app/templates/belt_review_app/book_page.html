@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ book.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'belt_review_app/style.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <!-- <h2>Book and review added successfully!</h2> -->
+        <h4>Book Title: <a href="#"> {{ book.title }}</a></h4>
+        {% for review in reviews %}
+            <p>Rating: {{ review.rating }}/5</p>
+            <p>Review by <a href="/user/{{ review.user.id }}">{{ review.user.first_name }}</a>:</p>
+            <p>{{ review.content }}</p>
+            <p>Posted: {{ review.created_at }}</p>
+            {% if review.user.id == request.session.user_id %}
+                <p><a href="/delete_review/{{ review.id }}">Delete</a></p>
+            {% endif %}
+            <hr>
+        {% endfor %}
+        <form action="/add_review/{{ book.id }}" method="post">
+            {% csrf_token %}
+            Add another review: <textarea name="review" rows="8"></textarea>
+            Rating: <select class="" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <input type="submit" name="" value="Add Review">
+        </form>
+        <a href="/books/add">Add Another Book</a> |
+        <a href="/success">Home</a>
+    </div>
+
+</body>
+</html>

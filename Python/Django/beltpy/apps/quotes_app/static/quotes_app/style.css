@@ -1,0 +1,9 @@
+.container{
+    display: inline-block;
+    width: 30%;
+    clear: both;
+}
+.container input, .container textarea{
+    width: 100%;
+    clear: both;
+}
