@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax Notes App</title>
+    <script type="text/javascript">
+        console.log($);
+        $(function(){
+            $("#post_form").click(function() {
+                $.ajax({
+                    url:"/notes",
+                    method:"POST",
+                    data:{
+                        csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
+                        note: $('input[name="note"]').val()
+                    },
+                    success:function(data){
+                        console.log(data);
+                        $('#posts_list').append($("<li>").text(data.note));
+                    }
+                })
+            });
+            // $('#post_form').on('submit', function(){
+            //     console.log("sending the post to the backend")
+            //     $.ajax({
+            //         url:"/posts",
+            //         method:"POST",
+            //         data:{
+            //             csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val(),
+            //             note: $('input[name="note"]').val()
+            //         },
+            //         success:function(data){
+            //             console.log(data);
+            //             $('#posts_list').append($("<li>").text(data.note));
+            //         }
+            //     })
+            //     return false;
+            // })
+
+        })
+    </script>
+</head>
+<body>
+    <h1>Notes</h1>
+    <hr>
+    <form id="post_form">
+        {% csrf_token %}
+    <div>
+        <h3>Django</h3>
+        <a id="add_django" href="">Description</a>
+        <ul id="django_list">
+        </ul>
+    </div>
+    </form>
+    <form id="post_form">
+    <div class="">
+        <h3>Python</h3>
+        <a href="#">Description</a>
+        <ul id="python_list">
+        </ul>
+    </div>
+        {% csrf_token %}
+        Add a note: <input type="text" name="note" value="">
+        <input id="add_post"type="submit" name="" value="Post it!">
+    </form>
+</body>
+</html>

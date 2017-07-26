@@ -8,10 +8,10 @@ EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 class UserManager(models.Manager):
     def user_validator(self, postData):
         errors = {}
-        if len(postData['name']) < 2:
-            errors['name'] = "Name must be at least 2 characters long."
-        if len(postData['alias']) < 2:
-            errors['alias'] = "Alias must be at least 2 characters long."
+        if len(postData['first_name']) < 2:
+            errors['first_name'] = "First name must be at least 2 characters long."
+        if len(postData['last_name']) < 2:
+            errors['last_name'] = "Last name must be at least 2 characters long."
         if not re.match(EMAIL_REGEX, postData['email']):
             errors['email'] = "Email must be valid."
         if len(postData['pw']) < 8:
@@ -22,32 +22,36 @@ class UserManager(models.Manager):
 
 # Create your models here.
 class User(models.Model):
-    name = models.CharField(max_length=254)
-    alias = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
     objects = UserManager()
 
-class QuoteManager(models.Manager):
-    def quote_validator(self, postData):
+class BookManager(models.Manager):
+    def book_validator(self, postData):
         errors = {}
-        if len(postData['author']) ==0:
+        if len(postData['title']) ==0:
+            errors['title'] = "Please include a book title."
+        if len(postData['author']) == 0:
             errors['author'] = "Please include an author."
-        if len(postData['quote']) == 0:
-            errors['quote'] = "Please include a quote."
+        if len(postData['review']) == 0:
+            errors['review'] = "Please include a review."
         return errors
 
-class Quote(models.Model):
-    content = models.CharField(max_length=255)
+class Book(models.Model):
+    title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
-    quote_by = models.ManyToManyField(User, related_name="fav_quote")
+    reviewed = models.ManyToManyField(User, related_name="reviewed")
+    # reviewed = models.ManyToManyField(User, related_name="reviewed")
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
-    objects = QuoteManager()
+    objects = BookManager()
 
-class Favorite(models.Model):
+class Review(models.Model):
+    rating = models.IntegerField()
     content = models.TextField()
     user = models.ForeignKey(User)
-    quote = models.ForeignKey(Quote)
+    book = models.ForeignKey(Book)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
