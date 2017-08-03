@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deck of cards</title>
+</head>
+<body>
+    <script type="text/javascript">
+    class Deck{
+        constructor(){
+            this.deck = []
+            let suits = ["Diamonds","Spades","Hearts","Clubs"]
+            let values = ["Ace",2,3,4,5,6,7,8,9,10,"Jack","Queen", "King"]
+            for (let suit in suits){
+                for (let val in values){
+                    this.deck.push(values[val]+"of"+suits[suit])
+                }
+            }
+        }
+        shuffle(){
+            for (let i=0; i<this.deck.length; i++){
+                let random = Math.floor(Math.random()*51);
+                console.log(random);
+                let temp = this.deck[random]
+                this.deck[random] = this.deck[i]
+                this.deck[i] = temp
+            }
+        }
+        deal(){
+            return this.deck.pop()
+        }
+    }
+
+    class Player{
+        constructor(card1,card2,card3,card4,card5){
+            this.hand = [card1,card2,card3,card4,card5];
+            console.log(this.hand);
+        }
+        draw(card){
+            this.hand.push(card);
+            console.log(this.hand);
+        }
+    }
+    let deck1 = new Deck();
+    deck1.shuffle();
+    console.log(deck1);
+
+    let player1 = new Player(deck1.deal(),deck1.deal(),deck1.deal(),deck1.deal(),deck1.deal())
+    player1.draw(deck1.deal())
+    </script>
+</body>
+</html>
