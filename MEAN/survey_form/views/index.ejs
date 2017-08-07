@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            // this triggers the connection event in our server!
+            var socket  = io.connect();
+            $('#submit').submit(function (e){
+                e.preventDefault(); // Prevent jquery from refreshing
+                socket.emit("posting_form", {
+                    name: $('#name').val(),
+                    location:$('#location').val(),
+                    language:$('#language').val(),
+                    comment:$('#comment').val(),
+                });
+            });
+            socket.on('message', function (data){
+                $('#message').html("You entered the following information to the server: "+JSON.stringify(data.response));
+                console.log(data);
+            });
+            socket.on('lucky_num', function (data){
+                console.log(data);
+                console.log(JSON.stringify(data));
+                $('#lucky_num').html("Your lucky number is: "+JSON.stringify(data.response));
+            });
+            // we'll write all the socket stuff after the above line!
+        })
+    </script>
+</head>
+<body>
+    <div id="message"></div>
+    <div id="lucky_num"></div>
+    <form id="submit" name=""action="/users" method="post">
+        Name: <input type="text" name="name" id="name"><br>
+        Location: <select name="location" id="location">
+          <option value="SJ">SJ</option>
+          <option value="SF">SF</option>
+          <option value="Berkeley">Berkeley</option>
+      </select><br>
+        Favorite Language: <select name="language" id="language">
+          <option value="Swift">Swift</option>
+          <option value="Javascript">Javascript</option>
+          <option value="C+">C+</option>
+      </select><br>
+        Comment: <textarea name="comment" rows="8" cols="80" id="comment"></textarea><br>
+        <input type="submit" name="" value="Submit Survey">
+    </form>
+
+</body>
+</html>
