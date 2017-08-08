@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotes</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            // this triggers the connection event in our server!
+        })
+    </script>
+</head>
+<body>
+    <h1>Here are the awesome quotes!</h1>
+    <% for (var i in quotes){ %>
+        <h5>"<%= quotes[i].quote %>"</h5>
+        <p>Quote by: <%=quotes[i].name %></p>
+        <hr>
+    <% }%>
+    <form action="/" method="get">
+        <input type="submit" name="" value="Add a quote!">
+    </form>
+</body>
+</html>

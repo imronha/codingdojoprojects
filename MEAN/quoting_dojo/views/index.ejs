@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QuotingDojo - Welcome</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            // this triggers the connection event in our server!
+        })
+    </script>
+</head>
+<body>
+    <h1>Welcome to QuotingDojo</h1>
+    <form action="/quotes" method="post">
+        Your Name: <input type="text" name="name" value=""><br>
+        Your Quote: <textarea name="quote" rows="8" cols="80"></textarea><br>
+        <input type="submit" name="" value="Add my quote!">
+    </form>
+    <form action="/quotes" method="get">
+        <input type="submit" name="" value="Skip to quotes">
+    </form>
+</body>
+</html>

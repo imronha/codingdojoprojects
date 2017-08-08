@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Group chat</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            var name = prompt("Please enter your name:");
+            var socket  = io.connect();
+            socket.emit("get_name", {name:name});
+            socket.on("chatroom_history", function(data){
+                for (var i = 0; i <data.messages.length; i++){
+                    $("#chatroom").append('<p>'+data.messages[i].name + " : " + data.messages[i].content+'</p>');
+                }
+            })
+            $('#submit').click(function(){
+                console.log($("#message").val());
+                socket.emit("msg_sent", {content: $("#message").val()});
+                $("#message").val(''); // Sets form to empty string after submitting
+                return false;
+            })
+            socket.on("distribute_msg", function(data){
+                console.log("Server says: ", {content: data.content})
+                $("#chatroom").append('<p>'+data.name + " : " + data.content+'</p>');
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Enter your message:</h1>
+    <div id="chatroom"></div>
+    <input id="message" type="text" name="" placeholder="Enter your message">
+    <button id="submit" type="submit" name="button">Send</button>
+</body>
+</html>

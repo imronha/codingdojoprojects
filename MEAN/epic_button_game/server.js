@@ -13,9 +13,10 @@ const server = app.listen(8000, function(){
 })
 
 const io = require('socket.io').listen(server);
-let count = 0;
 
 io.sockets.on('connection', function (socket) {
+    let count = 0;
+
     // console.log(socket);
     console.log("Client/socket is connected!");
     console.log("Client/socket id is: ", socket.id);

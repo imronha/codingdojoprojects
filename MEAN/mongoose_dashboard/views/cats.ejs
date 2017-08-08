@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Dashboard - Welcome</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            // this triggers the connection event in our server!
+        })
+    </script>
+</head>
+<body>
+    <h1>Welcome to Cat Dashboard</h1>
+    <h3>Current Cats</h3>
+    <hr>
+    <% for (var i in cats){ %>
+        <p>Cat id: <%= cats[i].id %></p>
+        <h3>Cat name: <a href="/cats/<%= cats[i].id %>"><%= cats[i].name %></a></h3>
+        <p>Cat breed: <%= cats[i].breed %></p>
+        <form action="/cats/destroy/<%= cats[i].id %>" method="post">
+            <input type="submit" name="" value="Remove cat">
+        </form>
+        <hr>
+    <% } %>
+    <form action="/cats/new" method="get">
+        <input type="submit" name="" value="Add a Cat">
+    </form>
+</body>
+</html>

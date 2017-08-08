@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cat Dashboard - Welcome</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+         $(document).ready(function (){
+            // this triggers the connection event in our server!
+        })
+    </script>
+</head>
+<body>
+    <h3>Information for <%= cat[0].name %></h3>
+    <p>Name of cat: <%= cat[0].name %></p>
+    <p>Breed of cat: <%= cat[0].breed %></p>
+    <form action="/cats/new" method="get">
+        <input type="submit" name="" value="Add a Cat">
+    </form>
+    <form action="/cats/destroy/<%= cat[0].id %>" method="post">
+        <input type="submit" name="" value="Remove <%= cat[0].name %>">
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>
