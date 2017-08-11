@@ -1,0 +1,7 @@
+<h1>Random Barcode Generator</h1>
+<style media="screen">
+    div{
+        display: inline-block;
+    }
+</style>
+<div  *ngFor='let color of colorArray' [ngStyle]="{'background-color': color, 'height':'50px', 'width':'50px'}"></div>

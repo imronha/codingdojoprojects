@@ -15,7 +15,7 @@
     overflow: auto;
 }
 #pokedex{
-    background-image: url('pokedex.png');
+    /*background-image: url('pokedex.png');*/
     background-size: contain;
     background-repeat: no-repeat;
     margin: 0px auto;
@@ -24,7 +24,7 @@
     vertical-align: top;
     display: inline-block;
     /*position: fixed;*/
-    border: 10px solid red;
+    /*border: 10px solid red;*/
     /*padding-left: 40px;*/
 }
 

@@ -1,0 +1,12 @@
+<style media="screen">
+    .yellow{
+        background-color: yellow;
+    }
+</style>
+<h1>US TIME ZONE DISPLAY</h1>
+<button (click)='timeChange("pst")' [ngClass]="{yellow: highlight === 'pst'}"type="button" name="pst">PST</button>
+<button (click)='timeChange("mst")' [ngClass]="{yellow: highlight === 'mst'}" type="button" name="mst">MST</button>
+<button (click)='timeChange("cst")'[ngClass]="{yellow: highlight === 'cst'}" type="button" name="cst">CST</button>
+<button (click)='timeChange("est")' [ngClass]="{yellow: highlight === 'est'}" type="button" name="est">EST</button>
+<button (click)='timeChange("clear")'type="button" name="clear">Clear</button>
+<div class="">{{ date }}</div>
