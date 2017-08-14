@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  statuses = [true,true,true,true,true,true,true,true,true,true]
+  switched(i){
+      this.statuses[i] = !this.statuses[i];
+  }
 }
