@@ -1,0 +1,101 @@
+<h1>Registration</h1>
+<h3>Account Information</h3>
+<div [hidden]="!registered"> Thank you for registering</div>
+<form (submit)="onSubmit()">
+    *First Name:
+    <input
+    type="text"
+    name="first_name"
+    required
+    minlength = "4"
+    maxlength = "24"
+    [(ngModel)]= "user.first_name"
+    #first_name='ngModel'
+    ><span *ngIf="first_name.errors" class="error"> First name must be valid</span><br>
+    *Last Name:
+    <input
+    type="text"
+    name="last_name"
+    required
+    minlength = "4"
+    maxlength = "24"
+    [(ngModel)]= "user.last_name"
+    #last_name='ngModel'
+    ><span *ngIf="last_name.errors" class="error"> Last name must be valid</span><br>
+    *Email:
+    <input
+    type="email"
+    name="email"
+    required
+    minlength = "4"
+    maxlength = "24"
+    ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/"
+    [(ngModel)]= "user.email"
+    #email='ngModel'
+    ><span *ngIf="email.errors" class="error"> Email must be valid</span><br>
+    *Password:
+    <input
+    type="password"
+    name="password"
+    required
+    minlength = "16"
+    [(ngModel)]= "user.password"
+    #password='ngModel'
+    ><span *ngIf="password.errors" class="error"> Password must be at least 16 characters long</span><br>
+    *Password Confirmation:
+    <input
+    type="password"
+    name="password_confirmation"
+    [(ngModel)] = "user.password_confirmation"
+    #password_confirmation="ngModel"
+    ><span *ngIf="password.value != password_confirmation.value" class="error"> Passwords must match</span><br>
+    *Stree Address:
+    <input
+    type="text"
+    name="street_address"
+    required
+    minlength = "4"
+    maxlength = "24"
+    [(ngModel)]= "user.street_address"
+    #street_address='ngModel'
+    ><span *ngIf="street_address.errors" class="error"> Street Address must be valid</span><br>
+    Unit/Apt #:<input type="text" name="unit" value=""><br>
+    *City:
+    <input
+    type="text"
+    name="city"
+    required
+    minlength = "4"
+    maxlength = "24"
+    [(ngModel)]= "user.city"
+    #city='ngModel'
+    ><span *ngIf="city.errors" class="error"> City name must be valid</span><br>
+    *State:
+    <input
+    type="text"
+    name="state"
+    required
+    minlength = "4"
+    maxlength = "24"
+    [(ngModel)]= "user.state"
+    #state='ngModel'
+    ><span *ngIf="state.errors" class="error"> State name must be valid</span><br>
+    <input *ngIf="!first_name.errors &amp;&amp; !last_name.errors &amp;&amp; !email.errors &amp;&amp; !street_address.errors &amp;&amp; !city.errors &amp;&amp; !state.errors" type="submit" value="Register"><br>
+    <!-- <input *ngIf="" type="submit" value="Register"><br> -->
+
+</form>
+
+
+
+
+<div>
+    <h3>Email</h3>
+    <p>Errors: {{email.errors | json}}</p>
+    <p>Valid? {{ email.valid | json }}</p>
+    <h3>First name</h3>
+    <p>Errors: {{first_name.errors | json}}</p>
+    <p>Valid? {{ first_name.valid | json }}</p>
+    <h3>Last name</h3>
+    <p>Errors: {{last_name.errors | json}}</p>
+    <p>Valid? {{ last_name.valid | json }}</p>
+</div>

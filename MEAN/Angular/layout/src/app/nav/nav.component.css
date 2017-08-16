@@ -1,0 +1,8 @@
+.nav {
+    display: inline-block;
+    vertical-align: top;
+    background-color: #72bdff;
+    border: 1px solid black;
+    width: 200px;
+    height: 500px;;
+}

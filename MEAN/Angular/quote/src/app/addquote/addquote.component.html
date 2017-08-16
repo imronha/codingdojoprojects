@@ -1,0 +1,30 @@
+<h1>Add a Quote</h1>
+<form (submit)="onSubmit()">
+    <textarea
+    name="content"
+    rows="8"
+    cols="50"
+    required
+    minlength = "4"
+    [(ngModel)]="quote.content"
+    #content = 'ngModel'
+    ></textarea><span *ngIf="content.errors" class="error"> Quote must be valid</span><br>
+    Author:
+    <input
+    type="text"
+    name="author"
+    required
+    minlength = "4"
+    maxlength= "15"
+    [(ngModel)]="quote.author"
+    #author = "ngModel"
+    ><span *ngIf="author.errors" class="error"> Author must be valid</span><br>
+    <input
+    [(ngModel)]="quote.rating"
+    #rating = 'ngModel'
+    type="hidden" name="rating" value="0">
+    <input type="submit" value="Add Quote">
+</form>
+
+
+<app-quote-list [myQuotes]="quotes" (myUpVoteEvent)="upVoted($event)"(myDownVoteEvent)="downVoted($event)" (myDeleteEvent)="delete($event)"></app-quote-list>
