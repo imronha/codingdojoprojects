@@ -1,0 +1,14 @@
+<div>
+    <h1>Q and A</h1>
+    <form #form='ngForm'>
+        Name:
+        <input
+        type="text"
+        name="name"
+        required
+        [(ngModel)]="user.name"
+        #name='ngModel'
+        > {{ name.errors | json }}
+        <input type="submit" [routerLink]="['/dashboard']" [disabled]="!form.valid"  (click)="onClick()" value="Submit">
+    </form>
+</div>

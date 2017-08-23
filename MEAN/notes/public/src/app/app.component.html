@@ -1,0 +1,22 @@
+<h1>Anonymous Notes</h1>
+<form #form='ngForm' (ngSubmit)="addNote()">
+    Enter Note:
+    <input
+    type="text"
+    name="text"
+    required
+    minlength="3"
+    [(ngModel)] = "note.text"
+    #text = 'ngModel'
+    > {{ text.errors | json}}
+    <input [disabled]="!form.valid" type="submit" value="Add Note">
+</form>
+
+<div *ngFor="let note of notes">
+    <div>
+        <p>{{ note.text }}</p>
+        <p>{{ note.createdAt }}</p>
+    </div>
+</div>
+
+{{ notes | json}}

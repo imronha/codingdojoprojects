@@ -1,0 +1,19 @@
+<h1>Add New Question</h1>
+<a [routerLink]="['']">Home</a> | <a href="#">Logout</a>
+<form #questionForm="ngForm" (submit)="createQuestion()">
+    Question:
+    <textarea
+    name="content"
+    rows="8"
+    cols="80"
+    required
+    minlength="10"
+    [(ngModel)]="question.content"
+    #content='ngModel'
+    ></textarea>{{ content.errors | json}}<br>
+    Description: <textarea name="description" rows="8" cols="80"></textarea><br>
+    <button [routerLink]="['']"type="button" >Cancel</button>
+    <input type="submit"
+    [disabled]="!questionForm.valid"
+    value="Add Quesiton">
+</form>

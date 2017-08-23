@@ -1,0 +1,6 @@
+<div>
+    <a [routerLink]="['/dashboard']">Home</a> | <a [routerLink]="['/question',question._id, 'new_answer']">Answer Question</a> |<a [routerLink]="['']">Logout</a>
+
+    <h1>{{ question.q_text }}</h1>
+    <p>{{ question.desc }}</p>
+</div>

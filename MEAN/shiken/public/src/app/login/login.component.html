@@ -1,0 +1,12 @@
+<h1>Q&amp;A</h1>
+<p>Please enter your name!</p>
+<form #loginForm="ngForm" (submit)="login()">
+    Name: <input
+    type="text"
+    name="name"
+    value="Guest"
+    required
+    minlength = "2"
+    ><br>
+    <input type="submit" value="Enter">
+</form>

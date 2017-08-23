@@ -1,0 +1,41 @@
+<h1>New Question</h1>
+<form>
+    Question:
+    <textarea
+    type="text"
+    name="content"
+    required
+    minlength="15"
+    [(ngModel)]= "question.content"
+    #question='ngModel'
+    ></textarea> {{ question.errors | json}}<br>
+    Correct Answer:
+    <input
+    type="text"
+    name="correct"
+    required
+    minlength="1"
+    [(ngModel)]= "question.correct"
+    #correct='ngModel'
+    >{{ correct.errors | json}}<br>
+    Fake Answer 1 :
+    <input
+    type="text"
+    name="fake1"
+    required
+    minlength="1"
+    [(ngModel)]= "question.fake1"
+    #fake1='ngModel'
+    >{{ fake1.errors | json}}<br>
+    Fake Answer 2 :
+    <input
+    type="text"
+    name="fake2"
+    required
+    minlength="1"
+    [(ngModel)]= "question.fake2"
+    #fake2='ngModel'
+    >{{ fake2.errors | json}}<br>
+    <input type="submit" value="Add Question">
+    <button [routerLink]="['']" type="button" name="button">Cancel</button>
+</form>

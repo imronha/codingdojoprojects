@@ -1,0 +1,13 @@
+
+<table class="table table-hover table-striped ">
+  <thead class="thead-inverse">
+    <th>Player Name</th>
+    <th>Preferred Position</th>
+    <th>Actions</th>
+  </thead>
+  <tr *ngFor = "let player of players">
+    <td *ngIf="player.name">{{player.name}}</td>
+    <td *ngIf="player.position">{{player.position}}</td>
+    <td><button (click)="deletePlayer(player._id)">Delete</button></td>
+  </tr>
+</table>

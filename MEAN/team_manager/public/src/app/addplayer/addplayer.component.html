@@ -1,0 +1,9 @@
+<form #addPlayerForm='ngForm' (submit)="addPlayer()">
+  <h2>Add Player</h2>
+  <label for="playerName">Player Name:</label>
+  <input type="text" id="playerName" name="playerName" [(ngModel)]="newPlayer.name" #playerName='ngModel' required minlength='2'>
+  <p *ngIf='playerName.dirty && !playerName.valid' class="error">Name is required (at least two characters).</p>
+  <label for="playerPosition">Preferred Position:</label>
+  <input type="text" id="playerPosition" name="playerPosition" [(ngModel)]="newPlayer.position">
+  <button type="submit" [disabled]='!addPlayerForm.form.valid'>ADD</button>
+</form>

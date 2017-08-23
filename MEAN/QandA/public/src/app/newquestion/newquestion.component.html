@@ -1,0 +1,17 @@
+<a [routerLink]="['/dashboard']">Home</a> | <a [routerLink]="['']"> Logout</a>
+<h1>Add New Question</h1>
+<form>
+    Question:
+    <textarea
+    name="q_text"
+    rows="8"
+    cols="80"
+    required
+    minlength="10"
+    [(ngModel)]="question.q_text"
+    #q_text='ngModel'
+    ></textarea><span *ngIf="q_text.errors && q_text.dirty"> Needs to be 10 characters long.</span><br>
+    Description: (Optional)<textarea name="desc" rows="8" cols="80"></textarea><br>
+    <button  [routerLink]="['/dashboard']" type="button" name="button"> Cancel</button>
+    <input  [routerLink]="['/dashboard']" (click)="onSubmit()"type="submit" name="" value="Submit">
+</form>

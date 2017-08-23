@@ -1,0 +1,26 @@
+<h2>Create a new product</h2>
+<form (submit)="onSubmit()">
+    Title: <input
+        type="text"
+        name="title"
+        required
+        minlength = "4"
+        [(ngModel)]="product.title"
+        #title = 'ngModel'><span *ngIf="title.errors" style="color:red"> Title must be valid</span><br>
+    Price: <input
+        type="text"
+        name="price"
+        required
+        pattern="integer"
+        [(ngModel)]="product.price"
+        #price = 'ngModel'><span *ngIf="price.errors" style="color:red"> Price must be valid</span><br>
+    Image URL: <input
+        type="text"
+        name="image"
+        required
+        [(ngModel)]="product.image"
+        #image = 'ngModel'><span *ngIf="image.errors" style="color:red"> Image link is required</span><br>
+    <input type="submit" name="title" value="Create">
+
+</form>
+{{ products | json }}

@@ -1,0 +1,23 @@
+
+
+<form #playerForm="ngForm" (submit)="createPlayer()">
+  Player Name:<input 
+    type="text" 
+    name="name"
+    required
+    minlength="2" 
+    [(ngModel)]="player.name"
+    #name = "ngModel"> {{name.errors | json}}
+  <br>
+  Preferred Position:<input 
+    type="text" 
+    name="position" 
+    required
+    minlength="2"
+    [(ngModel)]="player.position"
+    #position = "ngModel"> {{position.errors | json}}
+  <br>
+  <input type="submit" 
+  [disabled]="!playerForm.form.valid"
+  value="Add Player">
+</form>

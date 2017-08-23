@@ -1,0 +1,20 @@
+<a [routerLink]="['']">Home</a> | <a href="#">Go Back to Question</a>
+<h4>QUESTION GOES HERE</h4>
+<h6>DESCRIPTION HERE</h6>
+<form #answerForm="ngForm" (submit)="answerQuestion()">
+    Your Answer:
+    <textarea
+    name="response"
+    rows="8"
+    cols="80"
+    required
+    minlength="5"
+    [(ngModel)]="question.answers[0].response"
+    #response='ngModel'
+    ></textarea>{{ content.errors | json}}<br>
+    Supporting Details for your answer (optional): <textarea name="support" rows="8" cols="80"></textarea><br>
+    <button [routerLink]="['']"type="button" >Cancel</button>
+    <input type="submit"
+    [disabled]="!answerForm.valid"
+    value="Submit">
+</form>

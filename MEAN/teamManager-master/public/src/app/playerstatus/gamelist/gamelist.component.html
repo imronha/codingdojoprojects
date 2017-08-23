@@ -1,0 +1,29 @@
+
+<h2>Game# {{idx + 1}}</h2>
+
+<table class="table table-striped">
+  <thead class="thead-inverse">
+    <th>Player Name</th>
+    <th>Actions</th>
+  </thead>
+  <tr *ngFor="let player of players">
+    <td>{{ player.name }}</td>
+    <td *ngIf="player.status">
+      <button (click)="updateStatus('playing', idx, player._id)" 
+        class="btn" 
+        [ngClass]="{'green':player.status[idx] == 'playing'}">Playing</button>
+      <button (click)="updateStatus('undecided', idx, player._id)" 
+        class="btn" 
+        [ngClass]="{'yellow':player.status[idx] == 'undecided'}">Undecided</button>
+      <button (click)="updateStatus('notplaying', idx, player._id)" 
+        class="btn" 
+        [ngClass]="{'red':player.status[idx] == 'notplaying'}">NotPlaying</button>
+    </td>
+
+
+
+
+  </tr>
+</table>
+
+
