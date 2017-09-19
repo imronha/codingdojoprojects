@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14D20E6C1F6C643F00E0874C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D20E6B1F6C643F00E0874C /* AppDelegate.swift */; };
+		14D20E6E1F6C643F00E0874C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D20E6D1F6C643F00E0874C /* ViewController.swift */; };
+		14D20E711F6C643F00E0874C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D20E6F1F6C643F00E0874C /* Main.storyboard */; };
+		14D20E731F6C643F00E0874C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D20E721F6C643F00E0874C /* Assets.xcassets */; };
+		14D20E761F6C643F00E0874C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D20E741F6C643F00E0874C /* LaunchScreen.storyboard */; };
+		14D20E811F6C643F00E0874C /* dragonGoCraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D20E801F6C643F00E0874C /* dragonGoCraftTests.swift */; };
+		14D20E8C1F6C643F00E0874C /* dragonGoCraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D20E8B1F6C643F00E0874C /* dragonGoCraftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14D20E7D1F6C643F00E0874C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D20E601F6C643F00E0874C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D20E671F6C643F00E0874C;
+			remoteInfo = dragonGoCraft;
+		};
+		14D20E881F6C643F00E0874C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D20E601F6C643F00E0874C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D20E671F6C643F00E0874C;
+			remoteInfo = dragonGoCraft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14D20E681F6C643F00E0874C /* dragonGoCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dragonGoCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D20E6B1F6C643F00E0874C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14D20E6D1F6C643F00E0874C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14D20E701F6C643F00E0874C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14D20E721F6C643F00E0874C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14D20E751F6C643F00E0874C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14D20E771F6C643F00E0874C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D20E7C1F6C643F00E0874C /* dragonGoCraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dragonGoCraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D20E801F6C643F00E0874C /* dragonGoCraftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonGoCraftTests.swift; sourceTree = "<group>"; };
+		14D20E821F6C643F00E0874C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D20E871F6C643F00E0874C /* dragonGoCraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dragonGoCraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D20E8B1F6C643F00E0874C /* dragonGoCraftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonGoCraftUITests.swift; sourceTree = "<group>"; };
+		14D20E8D1F6C643F00E0874C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D20E651F6C643F00E0874C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E791F6C643F00E0874C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E841F6C643F00E0874C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14D20E5F1F6C643F00E0874C = {
+			isa = PBXGroup;
+			children = (
+				14D20E6A1F6C643F00E0874C /* dragonGoCraft */,
+				14D20E7F1F6C643F00E0874C /* dragonGoCraftTests */,
+				14D20E8A1F6C643F00E0874C /* dragonGoCraftUITests */,
+				14D20E691F6C643F00E0874C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14D20E691F6C643F00E0874C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D20E681F6C643F00E0874C /* dragonGoCraft.app */,
+				14D20E7C1F6C643F00E0874C /* dragonGoCraftTests.xctest */,
+				14D20E871F6C643F00E0874C /* dragonGoCraftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D20E6A1F6C643F00E0874C /* dragonGoCraft */ = {
+			isa = PBXGroup;
+			children = (
+				14D20E6B1F6C643F00E0874C /* AppDelegate.swift */,
+				14D20E6D1F6C643F00E0874C /* ViewController.swift */,
+				14D20E6F1F6C643F00E0874C /* Main.storyboard */,
+				14D20E721F6C643F00E0874C /* Assets.xcassets */,
+				14D20E741F6C643F00E0874C /* LaunchScreen.storyboard */,
+				14D20E771F6C643F00E0874C /* Info.plist */,
+			);
+			path = dragonGoCraft;
+			sourceTree = "<group>";
+		};
+		14D20E7F1F6C643F00E0874C /* dragonGoCraftTests */ = {
+			isa = PBXGroup;
+			children = (
+				14D20E801F6C643F00E0874C /* dragonGoCraftTests.swift */,
+				14D20E821F6C643F00E0874C /* Info.plist */,
+			);
+			path = dragonGoCraftTests;
+			sourceTree = "<group>";
+		};
+		14D20E8A1F6C643F00E0874C /* dragonGoCraftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14D20E8B1F6C643F00E0874C /* dragonGoCraftUITests.swift */,
+				14D20E8D1F6C643F00E0874C /* Info.plist */,
+			);
+			path = dragonGoCraftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D20E671F6C643F00E0874C /* dragonGoCraft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D20E901F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraft" */;
+			buildPhases = (
+				14D20E641F6C643F00E0874C /* Sources */,
+				14D20E651F6C643F00E0874C /* Frameworks */,
+				14D20E661F6C643F00E0874C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dragonGoCraft;
+			productName = dragonGoCraft;
+			productReference = 14D20E681F6C643F00E0874C /* dragonGoCraft.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14D20E7B1F6C643F00E0874C /* dragonGoCraftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D20E931F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraftTests" */;
+			buildPhases = (
+				14D20E781F6C643F00E0874C /* Sources */,
+				14D20E791F6C643F00E0874C /* Frameworks */,
+				14D20E7A1F6C643F00E0874C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D20E7E1F6C643F00E0874C /* PBXTargetDependency */,
+			);
+			name = dragonGoCraftTests;
+			productName = dragonGoCraftTests;
+			productReference = 14D20E7C1F6C643F00E0874C /* dragonGoCraftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14D20E861F6C643F00E0874C /* dragonGoCraftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D20E961F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraftUITests" */;
+			buildPhases = (
+				14D20E831F6C643F00E0874C /* Sources */,
+				14D20E841F6C643F00E0874C /* Frameworks */,
+				14D20E851F6C643F00E0874C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D20E891F6C643F00E0874C /* PBXTargetDependency */,
+			);
+			name = dragonGoCraftUITests;
+			productName = dragonGoCraftUITests;
+			productReference = 14D20E871F6C643F00E0874C /* dragonGoCraftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D20E601F6C643F00E0874C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Imron Hajiahmad";
+				TargetAttributes = {
+					14D20E671F6C643F00E0874C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2676934267;
+						ProvisioningStyle = Automatic;
+					};
+					14D20E7B1F6C643F00E0874C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2676934267;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14D20E671F6C643F00E0874C;
+					};
+					14D20E861F6C643F00E0874C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2676934267;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 14D20E671F6C643F00E0874C;
+					};
+				};
+			};
+			buildConfigurationList = 14D20E631F6C643F00E0874C /* Build configuration list for PBXProject "dragonGoCraft" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14D20E5F1F6C643F00E0874C;
+			productRefGroup = 14D20E691F6C643F00E0874C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D20E671F6C643F00E0874C /* dragonGoCraft */,
+				14D20E7B1F6C643F00E0874C /* dragonGoCraftTests */,
+				14D20E861F6C643F00E0874C /* dragonGoCraftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D20E661F6C643F00E0874C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D20E761F6C643F00E0874C /* LaunchScreen.storyboard in Resources */,
+				14D20E731F6C643F00E0874C /* Assets.xcassets in Resources */,
+				14D20E711F6C643F00E0874C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E7A1F6C643F00E0874C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E851F6C643F00E0874C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D20E641F6C643F00E0874C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D20E6E1F6C643F00E0874C /* ViewController.swift in Sources */,
+				14D20E6C1F6C643F00E0874C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E781F6C643F00E0874C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D20E811F6C643F00E0874C /* dragonGoCraftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D20E831F6C643F00E0874C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D20E8C1F6C643F00E0874C /* dragonGoCraftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14D20E7E1F6C643F00E0874C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D20E671F6C643F00E0874C /* dragonGoCraft */;
+			targetProxy = 14D20E7D1F6C643F00E0874C /* PBXContainerItemProxy */;
+		};
+		14D20E891F6C643F00E0874C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D20E671F6C643F00E0874C /* dragonGoCraft */;
+			targetProxy = 14D20E881F6C643F00E0874C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14D20E6F1F6C643F00E0874C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D20E701F6C643F00E0874C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14D20E741F6C643F00E0874C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D20E751F6C643F00E0874C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14D20E8E1F6C643F00E0874C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14D20E8F1F6C643F00E0874C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14D20E911F6C643F00E0874C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14D20E921F6C643F00E0874C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraft;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		14D20E941F6C643F00E0874C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dragonGoCraft.app/dragonGoCraft";
+			};
+			name = Debug;
+		};
+		14D20E951F6C643F00E0874C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dragonGoCraft.app/dragonGoCraft";
+			};
+			name = Release;
+		};
+		14D20E971F6C643F00E0874C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = dragonGoCraft;
+			};
+			name = Debug;
+		};
+		14D20E981F6C643F00E0874C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2676934267;
+				INFOPLIST_FILE = dragonGoCraftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = imronha.dragonGoCraftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = dragonGoCraft;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D20E631F6C643F00E0874C /* Build configuration list for PBXProject "dragonGoCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D20E8E1F6C643F00E0874C /* Debug */,
+				14D20E8F1F6C643F00E0874C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D20E901F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D20E911F6C643F00E0874C /* Debug */,
+				14D20E921F6C643F00E0874C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14D20E931F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D20E941F6C643F00E0874C /* Debug */,
+				14D20E951F6C643F00E0874C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14D20E961F6C643F00E0874C /* Build configuration list for PBXNativeTarget "dragonGoCraftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D20E971F6C643F00E0874C /* Debug */,
+				14D20E981F6C643F00E0874C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D20E601F6C643F00E0874C /* Project object */;
+}
